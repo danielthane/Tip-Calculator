@@ -127,6 +127,11 @@ header {
   gap: 1.2rem;
 }
 
+/* // Button Utility Classes // */
+.active {
+  background-color: hsl(172, 50%, 65%);
+}
+
 /* Results Section Styling */
 .result-container {
   background-color: hsl(183, 100%, 15%);
