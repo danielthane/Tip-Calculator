@@ -18,6 +18,10 @@ body {
   align-items: center;
 }
 
+h1 {
+  display: none;
+}
+
 h2 {
   font-size: 1rem;
   color: hsl(186, 14%, 43%);
