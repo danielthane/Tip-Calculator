@@ -1,0 +1,182 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* General Class Changes */
+
+body {
+  font-family: "Space Mono", monospace;
+  background-color: hsl(185, 41%, 84%);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h2 {
+  font-size: 1rem;
+  color: hsl(186, 14%, 43%);
+  padding-top: 1.6rem;
+}
+
+p {
+  font-size: 0.8rem;
+  color: hsl(184, 14%, 56%);
+}
+
+/* Input box styling */
+
+input::placeholder {
+  color: hsl(186, 14%, 43%);
+}
+
+#bill {
+  background-image: url(images/icon-dollar.svg);
+}
+
+#number-people {
+  background-image: url(images/icon-person.svg);
+}
+
+input {
+  background-color: hsl(189, 41%, 97%);
+  background-repeat: no-repeat;
+  background-position: left;
+  border: none;
+  border-radius: 6px;
+  color: hsl(183, 100%, 15%);
+  font-family: inherit;
+  font-size: 1.6rem;
+  padding: 0.4rem 1rem 0.4rem 0;
+  text-align: right;
+  width: 100%;
+}
+
+input .wide-input {
+  margin-top: 1.2rem;
+}
+
+input:focus {
+  outline: none;
+  box-shadow: inset 0px 0px 0px 3px hsl(172, 67%, 45%);
+}
+
+/* #bill {
+  background: url(images/icon-dollar.svg) no-repeat scroll 10px 10px;
+}
+
+#number-people {
+  background: url(images/icon-person.svg) no-repeat scroll 10px 10px;
+} */
+
+/* Header Styling */
+
+header {
+  text-align: center;
+  padding: 3rem 0;
+}
+
+/* Main app page styling */
+
+.main-container {
+  background-color: hsl(0, 0%, 100%);
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  margin-bottom: 1rem;
+  padding: 0rem 2rem 2rem 2rem;
+}
+
+.warning-title {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+}
+
+#warning {
+  color: rgb(245, 107, 56);
+  display: none;
+}
+
+/* Button Styling */
+.btn {
+  background-color: hsl(183, 100%, 15%);
+  border: none;
+  border-radius: 6px;
+  color: hsl(189, 41%, 97%);
+  font-family: inherit;
+  font-size: 1.6rem;
+  padding: 0.4rem 0rem;
+  text-align: center;
+}
+
+.btn:hover,
+.btn:active {
+  background-color: hsl(172, 50%, 65%);
+  cursor: pointer;
+}
+
+.button-cluster {
+  padding-top: 1.2rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.2rem;
+}
+
+/* Results Section Styling */
+.result-container {
+  background-color: hsl(183, 100%, 15%);
+  border: none;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 1.6rem;
+  padding: 1.2rem 1.4rem;
+}
+
+.result-heading {
+  color: white;
+  padding-top: none;
+}
+
+.result-value {
+  font-size: 2rem;
+  color: hsl(172, 67%, 45%);
+}
+
+.result-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.reset {
+  background-color: hsl(172, 67%, 45%);
+  color: hsl(183, 100%, 15%);
+  font-size: 1.2rem;
+  margin-top: 1.2rem;
+}
+
+/* Media Quesries */
+@media screen and (min-width: 750px) {
+  .main-container {
+    border-radius: 20px;
+    display: flex;
+    height: 100%;
+    gap: 2rem;
+  }
+  .input-container {
+    flex: 1;
+  }
+  .result-container {
+    flex: 1;
+    gap: 3rem;
+  }
+  .reset {
+    margin-top: 7rem;
+  }
+}
