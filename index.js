@@ -32,7 +32,6 @@ document.querySelectorAll(".tip").forEach((item) => {
 
 function updateResults() {
   if (people > 0) {
-    console.log("updating...");
     tip = billStartingVal * (tipPercentage / 100);
     document.getElementById("tip-per-person").textContent = calcTip();
     document.getElementById("total-per-person").textContent = calcBill();
