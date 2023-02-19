@@ -11,21 +11,6 @@ let tip;
 let finalBill;
 
 //Function Definitions
-function updateResults() {
-  if (people > 0) {
-    tip = billStartingVal * (tipPercentage / 100);
-    document.getElementById("tip-per-person").textContent = calcTip();
-    document.getElementById("total-per-person").textContent = calcBill();
-  }
-}
-
-function calcTip() {
-  return Math.round((tip / people) * 100) / 100;
-}
-
-function calcBill() {
-  return Math.round(((billStartingVal + tip) / people) * 100) / 100;
-}
 
 // DOM MANIPULATION
 // Dynamically Change the Bill Value without tip
@@ -66,5 +51,22 @@ resetButtonEl.addEventListener("click", () => {
   people = 0;
   finalBill = 0;
   tip = 0;
-  updateResults();
+  document.getElementById("tip-per-person").textContent = 0;
+  document.getElementById("total-per-person").textContent = 0;
 });
+
+function updateResults() {
+  if (people > 0) {
+    tip = billStartingVal * (tipPercentage / 100);
+    document.getElementById("tip-per-person").textContent = calcTip();
+    document.getElementById("total-per-person").textContent = calcBill();
+  }
+}
+
+function calcTip() {
+  return Math.round((tip / people) * 100) / 100;
+}
+
+function calcBill() {
+  return Math.round(((billStartingVal + tip) / people) * 100) / 100;
+}
