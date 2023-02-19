@@ -11,7 +11,6 @@ let finalBill;
 // Dynamically Change the Bill Value without tip
 billCostEl.addEventListener("input", () => {
   billStartingVal = parseFloat(billCostEl.value);
-  console.log(billStartingVal);
 });
 
 //Dynamically Change the people value
@@ -27,13 +26,17 @@ peopleEl.addEventListener("input", () => {
 document.querySelectorAll(".tip").forEach((item) => {
   item.addEventListener("click", () => {
     tipPercentage = item.innerHTML.split("%")[0];
-    console.log(tipPercentage);
+    updateResults();
   });
 });
 
 function updateResults() {
-  document.getElementById("tip-per-person").textContent = calcTip();
-  document.getElementById("total-per-person").textContent = calcBill();
+  if (people > 0) {
+    console.log("updating...");
+    tip = billStartingVal * (tipPercentage / 100);
+    document.getElementById("tip-per-person").textContent = calcTip();
+    document.getElementById("total-per-person").textContent = calcBill();
+  }
 }
 
 function calcTip() {
